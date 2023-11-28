@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-color: rgb(3, 3, 3,0.9);
+}
+.contenedormenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+}
+.contenedormenu .logo{
+        margin-right: 30vw;
+}
+.contenedormenu .logo img{
+    width: 70%;
+}
+.contenedorimgytitulo{
+    display: flex;
+    position: relative;
+    text-align: center;
+    
+}
+.navbar-brand{
+    color: #660DBA;
+    font-family:'Alfa Slab One', serif;
+}
+.nav-link {
+    font-family: 'Alfa Slab One', serif;
+    color: #660DBA;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+    color: #E47C09;
+}
+.dropdown-menu a{
+    color: #E47C09;
+    font-family: 'Alfa Slab One', serif;
+}
+.contenedorimgytitulo .tituloindex{
+    position: absolute;
+    padding: 80px;
+}
+.contenedorimgytitulo .tituloindex p{
+    color: aliceblue;
+    font-size: 30px; 
+    font-family:'Kanit', sans-serif; 
+}
+.contenedorimgytitulo .tituloindex h1{
+        font-size: 50px;
+        font-family:'Marhey', sans-serif; 
+        color: #E47C09;
+}
+.contenedorimgytitulo .sectionimagen img{
+    width: 100%;
+    margin-left: 10vw;
+    margin-top: 20vw;
+}
+
+.contenedorimgytitulo .tituloindex button{
+    padding: 5px;
+    border-radius: 20px;
+    background-color:#660DBA;
+    color:aliceblue;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family:'Kanit', sans-serif ;
+}
+
+.contenedorimgytitulo .tituloindex button:hover{
+   background-color: #E47C09;
+   color: black;
+   font-weight: bolder;
+} 
+.contenedorservi{
+    background-image: url(../img/fondo.jpg);
+    background-position:center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+
+
+}
+.contenedorservi .servicio{
+    background-color: rgb(3, 3, 3, 0.9);
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50px;
+    margin: 20px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.contenedorservi .servicio h3{
+    font-size: 20px;
+    color: #E47C09;
+    font-family:'Marhey', sans-serif; 
+    
+}
+.contenedorservi .servicio p{
+    color: aliceblue;
+    font-family:'Marhey', sans-serif; 
+}
+.contenedorservi .servicio img{
+    width: 60%;
+    height: 50%;
+}
+.contenedorservi .servicio button{
+    font-family: 'Marhey', sans-serif;
+    border-radius: 50px;
+    padding: 5px;
+    background-color: #660DBA;
+
+}
+.tituloventa{
+    text-align: center;
+    color: #E47C09;
+    font-family:'Marhey', sans-serif; 
+    font-weight: bolder;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.footer img{
+    margin-top: 1vw;
+}
+.footer ul li{
+    list-style: none;
+    color: blanchedalmond;
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+.footer ul li ion-icon{
+    margin-right: 5px;
+    color: #660DBA;
+}
