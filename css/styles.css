@@ -6,6 +6,7 @@
 body{
     background-color: rgb(3, 3, 3,0.9);
 }
+/*menu*/
 .contenedormenu{
     display: flex;
     flex-direction: row;
@@ -17,12 +18,6 @@ body{
 }
 .contenedormenu .logo img{
     width: 70%;
-}
-.contenedorimgytitulo{
-    display: flex;
-    position: relative;
-    text-align: center;
-    
 }
 .navbar-brand{
     color: #660DBA;
@@ -38,6 +33,13 @@ body{
 .dropdown-menu a{
     color: #E47C09;
     font-family: 'Alfa Slab One', serif;
+}
+/*index*/
+.contenedorimgytitulo{
+    display: flex;
+    position: relative;
+    text-align: center;
+    
 }
 .contenedorimgytitulo .tituloindex{
     position: absolute;
@@ -121,6 +123,7 @@ body{
     font-family:'Marhey', sans-serif; 
     font-weight: bolder;
 }
+/*foooter*/
 .footer{
     display: flex;
     flex-direction: row;
@@ -138,4 +141,25 @@ body{
 .footer ul li ion-icon{
     margin-right: 5px;
     color: #660DBA;
+} 
+/*Accesorios html*/
+.tituloacce{
+    font-family: 'Marhey', sans-serif;
+    color: #660DBA;
+    margin: 10px;
+    text-align: center;
+}
+#carouselExampleCaptions{
+    width: 100%;
+    padding: 8vw;
+}
+.carousel-inner{
+    display: block;
+    justify-items: center;
+}
+.carousel-item img{
+    width: 100%;
+
+    
+
 }
