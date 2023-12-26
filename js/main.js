@@ -20,7 +20,7 @@ function mostrarProductos() {
     mensaje += `${i + 1}. ${productos[i].nombre} - $${productos[i].precio}\n ` 
   }
   alert(mensaje);
-}
+};
 
 function buscarYAgregar(nombreProducto){
   const productoEncontrado = productos.find(producto => producto.nombre.toLowerCase() === nombreProducto.toLowerCase());
@@ -30,8 +30,8 @@ function buscarYAgregar(nombreProducto){
     alert(`${productoEncontrado.nombre} ha sido agregado al carrito`);
   } else {
     alert(`Producto no encontrado`);
-  }
-}
+  };
+};
 
 function mostrarCarrito() {
   alert(`Productos en el carrito:\n + carrito.map(producto => ${producto.nombre} - $${producto.precio}).join(\n)`);
@@ -41,7 +41,7 @@ function mostrarCarrito() {
 
 function calcularTotal(){
   return carrito.reduce((total, producto)=> total + producto.precio, 0);
-} 
+};
 
 let continuarComprando = true ;
 
@@ -54,12 +54,12 @@ while(continuarComprando) {
     buscarYAgregar(nombreProducto);
   } else {
     alert(`Opcion no valida`);
-  }
+  };
 
   const respuesta = prompt (`Quiere seguir comprando? (si/no)`);
   continuarComprando = respuesta === "si"
 
- }
+ };
 
 
 
