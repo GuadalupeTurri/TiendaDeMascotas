@@ -34,6 +34,7 @@ body{
     color: #E47C09;
     font-family: 'Alfa Slab One', serif;
 }
+
 /*index*/
 .contenedorimgytitulo{
     display: flex;
@@ -160,6 +161,61 @@ body{
 .carousel-item img{
     width: 100%;
 
-    
-
 }
+.carousel-caption ul {
+    margin-top: 20%;
+    color: black;
+    list-style: none;
+    font-family: 'Kanit', sans-serif ;
+}
+.subtituloimg {
+    width: 100%;
+}
+.subtituloimg img{
+    width: 100%;
+}
+
+/*css contacto*/
+.titulocontac{
+    text-align: center;
+    margin: 2vw;
+}
+.titulocontac h1{
+    color: #2C065C;
+    font-family: 'Kanit', sans-serif ;
+}
+.contenedorcontact {
+    width: 50%;
+    margin-left: 25%;
+    border: solid 20px #2C065C;
+    border-radius: 50px;
+    margin-bottom: 30px;
+    padding: 20px;
+  }
+  .contenedorcontact span {
+    background-color: #AD38FD;
+  }
+  .contenedorcontact input {
+    background-color:#E47C09;
+  }
+  .contenedorcontact input:focus {
+    border: #2C065C;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: aliceblue;
+  }
+  .contenedorcontact label {
+    color: aliceblue;
+  }
+  .contenedorcontact textarea {
+    background-color: #E47C09;
+  }
+  .contenedorcontact textarea:focus {
+    border: #2C065C;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: aliceblue;
+  }
+  .contenedorcontact .botonformulario button {
+    background-color: #2C065C;
+    width: 100%;
+    margin-bottom: 50px;
+  }

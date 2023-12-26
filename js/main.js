@@ -1,60 +1,74 @@
-//actividad de clase 1
-// let nombre = prompt("ingresar nombre");
-// alert ("Hola " + "  " + nombre + " como estas?");
-// console.log (nombre);
+//Segunda pre entrega JAVASCRIPT
+//PRODUCTOS DE MASCOTAS
+//BUSCA PRODUCTOS, AGREGAS AL CARRITO Y SUMAS EL TOTAL DE LA COMPRA!!
 
-// let edad = Number(prompt ("ingresar edad"));
-// alert ("tienes" + "  " + edad + " años?");
-// console.log (edad);
 
-// let año = Number (prompt ("ingrese año de nacimiento"));
-// alert ("naciste en " +  "  " + año + " ?");
-// console.log (año);
+const productos = [
+  {nombre:"cama rosa", precio: 20000},
+  {nombre:"collar brillo", precio: 5500},
+  {nombre:"collar cuero", precio: 10000},
+  {nombre:"dulce sueno", precio: 30000},
+  {nombre:"cama pluma", precio: 28000},
+  {nombre:"collar vip", precio: 12000},
+];
 
-//actividad clase 2
-// let respuesta = prompt ("Terminaste la tarea?");
-//    if(respuesta === "si"){
-//  alert ("puedes salir a jugar");
-//   } else {
-//    alert ("no puedes salir a jugar");
-//   }
+let carrito = [];
 
-// let edad = Number(prompt("ingrese su edad"));
-//     if (edad < 14){
-//         alert("no puedes entrar");
-//     } else if (edad < 18) {
-//         alert ("ingresar con un adulto responsable");
-//     } else {
-//         alert ("puedes entrar");
-//     }
+function mostrarProductos() {
+  let mensaje = "Productos disponibles:\n";
+  for (let i = 0; i < productos.length; i++) {
+    mensaje += `${i + 1}. ${productos[i].nombre} - $${productos[i].precio}\n ` 
+  }
+  alert(mensaje);
+}
 
-// // let nombre = prompt ("ingrese el nombre");
-// // let apellido = prompt ("ingrese el apellido");
+function buscarYAgregar(nombreProducto){
+  const productoEncontrado = productos.find(producto => producto.nombre.toLowerCase() === nombreProducto.toLowerCase());
 
-// // if (nombre != " " && apellido != " ") {
-// //     alert ("hola  "  + nombre + " " + apellido);
-// // } else {
-// //     alert(" los datos son requeridos")
-// // }
+  if (productoEncontrado) {
+    carrito.push(productoEncontrado);
+    alert(`${productoEncontrado.nombre} ha sido agregado al carrito`);
+  } else {
+    alert(`Producto no encontrado`);
+  }
+}
 
-//actividad de clase 2
+function mostrarCarrito() {
+  alert(`Productos en el carrito:\n + carrito.map(producto => ${producto.nombre} - $${producto.precio}).join(\n)`);
+};
 
-// let numero = prompt("ingrese su numero");
-//  if (numero > 1000) {
-//     alert("Excede la cantidad")
-//  } else {
-//     alert("el numero no es mayor a 1000")
-//  }
 
-//  let texto = prompt("ingrese el texto");
-//  if (texto === "hola"){
-//     console.log("hola");
-//  }else {
-//     console.log("no valido el texto");
-// //  }
-//  let Numero = prompt ("ingrese un numero");
-//   if (Numero >=10 && Numero <=50) {
-//     alert("Numero aprobado");
-//   }else {
-//     alert("numero invalido");
-//   }
+
+function calcularTotal(){
+  return carrito.reduce((total, producto)=> total + producto.precio, 0);
+} 
+
+let continuarComprando = true ;
+
+while(continuarComprando) {
+  mostrarProductos();
+
+  const buscarProducto = prompt(`Esta buscando un producto para tu mascota?`);
+  if (buscarProducto === 'si'){
+    const nombreProducto = prompt('ingrese nombre del producto');
+    buscarYAgregar(nombreProducto);
+  } else {
+    alert(`Opcion no valida`);
+  }
+
+  const respuesta = prompt (`Quiere seguir comprando? (si/no)`);
+  continuarComprando = respuesta === "si"
+
+ }
+
+
+
+const totalCarrito = calcularTotal();
+alert(`Gracias por su compra! \n El total es $${totalCarrito}`);
+console.log(totalCarrito);
+
+
+
+  
+
+
